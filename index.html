@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panaderia Ceja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMAGENES/LOGOTIPO.jpeg" alt="Panaderia Ceja">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Bienvenido a Panaderia Ceja</h1>
+        <p>Pasteles y postres artesanales hechos con amor</p>
+    </section>
+
+    <main>
+        <section id="productos" class="productos">
+            <div class="producto">
+                <img src="IMAGENES/PAS.CHOCO.jpg" alt="Pastel de Chocolate">
+                <h2>Pastel de Chocolate</h2>
+                <p>Precio: $350 MXN</p>
+                <button onclick="agregarAlCarrito('Pastel de Chocolate', 350)">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="IMAGENES/TRES.LECHES.jpg" alt="Pastel de Tres Leches">
+                <h2>Pastel de Tres leches</h2>
+                <p>Precio: $400 MXN</p>
+                <button onclick="agregarAlCarrito('Pastel de Tres leches', 400)">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="IMAGENES/PAS.ZANA.jpg" alt="Pastel de Zanahoria">
+                <h2>Tarta de Zanahoria</h2>
+                <p>Precio: $380 MXN</p>
+                <button onclick="agregarAlCarrito('Pastel de Zanahoria', 380)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/RED.VELVET.jpg" alt="Pastel de Red velvet">
+                <h2>Pastel de Red velvet</h2>
+                <p>Precio: $450 MXN</p>
+                <button onclick="agregarAlCarrito('Pastel de Red velvet', 450)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/DONA.jpg" alt="Dona">
+                <h2>Dona</h2>
+                <p>Precio: $15 MXN</p>
+                <button onclick="agregarAlCarrito('Pastel de Red velvet', 15)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/MUFFIN.jpg" alt="Muffin de Chocolate">
+                <h2>Muffin de Chocolate</h2>
+                <p>Precio: $15 MXN</p>
+                <button onclick="agregarAlCarrito('Muffin de Chocolate', 15)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/PAY.jpg" alt="Pay de Queso con Fresa">
+                <h2>Pay de Queso con Fresa</h2>
+                <p>Precio: $25 MXN</p>
+                <button onclick="agregarAlCarrito('Pay de Queso con Durazno', 25)">Agregar al carrito</button>
+            </div>
+             <div class="producto">
+                <img src="IMAGENES/PAY2.jpg" alt="Pay de Queso con Durazno">
+                <h2>Pay de Queso con Durazno</h2>
+                <p>Precio: $25 MXN</p>
+                <button onclick="agregarAlCarrito('Pay de Queso con Durazno', 25)">Agregar al carrito</button>
+            </div>
+        </section>
+<section id="historia" class="historia">
+    <h2>Nuestra Historia</h2>
+    <p>
+        Fundada en 2015, <strong>Panaderia Ceja</strong> nace del amor por la pastelería artesanal. 
+        Cada pastel está hecho con ingredientes frescos y recetas únicas, combinando tradición y creatividad. 
+        Nuestra misión es endulzar la vida de nuestros clientes con sabores auténticos y momentos memorables. 
+        Nuestra dirección: 
+       <a href="https://maps.app.goo.gl/pBedwTmtUkCuq12G8" target="_blank" rel="noopener noreferrer">
+            Ver en Google Maps
+        </a>
+    </p>
+</section>
+
+        <section id="carrito" class="carrito">
+            <h2>Tu Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total">0</span> MXN</p>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+
+            <!-- Botón de pago con PayPal -->
+            <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="TU_CORREO_PAYPAL@example.com">
+                <input type="hidden" name="item_name" value="Productos de Delicias Dulces">
+                <input type="hidden" name="amount" id="paypal-amount" value="0">
+                <input type="hidden" name="currency_code" value="MXN">
+                <button type="submit">Pagar con PayPal</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <p>Contacto: contacto@panaderiaceja.com | &copy; 2025 Panaderia Ceja</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
